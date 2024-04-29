@@ -1,3 +1,48 @@
 @import "./variables/variables";
 @import "./mixin/all-mixin";
 @import "./all blocks/all-blocks";
+
+.main-section{
+    .main-section__card-items{
+        @include flex-between;
+        .card-items__title{
+            width: 900px;
+            height: 800px;
+            @include flex-col;
+            .card-items__subtitle{
+                font-size: 30px;
+            }
+            .card-items__main-title{
+                padding: 10px;
+                .card-items__header-title{
+                    h1, span{
+                        font-size: 60px;
+                        display: inline-block;
+                    }
+                    p{
+                        width: 700px;
+                        color: grey;
+                        line-height: 2;
+                        font-size: 25px;
+                    }
+                }
+            }
+            .card-items__date-title{
+                div:first-child {
+                    width: 270px;
+                    @include flex-between;
+                }
+                div:last-child {
+                    width: 250px;
+                    @include flex-between;
+                    p{
+                        color: #009E06;
+                    }
+                }
+            }
+            .card-items__last-title{
+                color: grey;
+            }
+        }
+    }
+}
